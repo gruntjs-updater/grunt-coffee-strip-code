@@ -1,0 +1,35 @@
+{
+  "name": "grunt-coffee-strip-code",
+  "version": "0.0.1",
+  "description": "A Grunt task to remove delvelop and test only code blocks from production builds of CoffeeScript files.",
+  "author": {
+    "name": "Maciej Sypień",
+    "email": "maciejsypien@gmail.com",
+    "url": "http://egel.pl"
+  },
+  "homepage": "https://github.com/egel/grunt-coffee-strip-code",
+  "scripts": {
+    "test": "grunt test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:egel/grunt-coffee-strip-code.git"
+  },
+  "keywords": [
+    "coffee",
+    "strip",
+    "comments",
+    "gruntplugin",
+    "unit",
+    "test",
+    "private"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/egel/grunt-coffee-strip-code/issues"
+  },
+  "main": "index.js",
+  "engines": {
+    "node": ">= 0.8.0"
+  }
+}
