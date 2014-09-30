@@ -5,6 +5,5 @@
 
   return {
     bar: "bar"
-
   }
 )()

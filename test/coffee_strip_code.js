@@ -69,11 +69,11 @@ exports.coffee_strip_code = {
     var expected1 = grunt.file.read('test/expected/multiple_files1.coffee');
     var actual2 = grunt.file.read('tmp/multiple_files2.coffee');
     var expected2 = grunt.file.read('test/expected/multiple_files2.coffee');
-    var actual3 = grunt.file.read('tmp/another_multiple_file.coffee');
-    var expected3 = grunt.file.read('test/expected/another_multiple_file.coffee');
-    test.equal(actual1, expected1, 'should handle multiple files.');
-    test.equal(actual2, expected2, 'should handle multiple files.');
-    test.equal(actual3, expected3, 'should handle multiple files.');
+    var actual3 = grunt.file.read('tmp/multiple_files3.coffee');
+    var expected3 = grunt.file.read('test/expected/multiple_files3.coffee');
+    test.equal(actual1, expected1, 'should handle multiple files 1.');
+    test.equal(actual2, expected2, 'should handle multiple files 2.');
+    test.equal(actual3, expected3, 'should handle multiple files 3.');
 
     test.done();
   },
