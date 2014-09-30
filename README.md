@@ -16,7 +16,6 @@ then add line to `Gruntfile.js`:
     grunt.loadNpmTasks('grunt-coffee-strip-code');
 
 
-
 ## License
 The MIT License (MIT) - Copyright (c) 2014 Maciej Sypień
 
