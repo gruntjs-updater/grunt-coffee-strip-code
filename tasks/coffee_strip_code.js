@@ -11,6 +11,9 @@ module.exports = function(grunt) {
           start_comment_tag: "test-block-start",
           end_comment_tag: "test-block-end"
         })
+
+      // Full pattern
+      // /([\t ]* ?\#\# ?test-block-start ?\#\#.*\n?)([\s\S]*?)(\#\# ?test-block-end ?\#\#.*\n)/g
       , pattern = options.pattern || new RegExp(
           "([\\t ]*\\#\\# ?" + options.start_comment_tag + " ?\\#\\#.*\n?)" +
           "[\\s\\S]*?" +
