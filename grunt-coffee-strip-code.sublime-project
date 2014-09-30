@@ -10,7 +10,8 @@
       ],
       "file_exclude_patterns":
       [
-        "README.html"
+        "README.html",
+        "*.sublime-workspace",
       ],
 		}
 	],
