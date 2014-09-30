@@ -8,7 +8,7 @@ A Grunt task to remove develop and test only code blocks from production builds 
 
 Install in your workspace project
 
-    $ cd ~/your/workspace/poject
+    $ cd ~/your/workspace/project
     $ npm install grunt-coffee-strip-code --save-dev
 
 then add line to `Gruntfile.js`:
@@ -26,10 +26,10 @@ In `Gruntfile.js` add section named `coffee_strip_code` to the data object passe
     grunt.initConfig({
       coffee_strip_code: {
         options: {
-          // Task-specyfic options go here.
+          // Task-specific options go here.
         },
         your_target: {
-          // Task-specyfic file lists and/or options go here.
+          // Task-specific file lists and/or options go here.
         },
       },
     })
@@ -52,7 +52,7 @@ The text inside the closing comment used to identify code to strip.
 Type: `RegExp`
 Default value: (a generated RegExp matching the start and end comments)
 
-If the default start and end comment matching doesn't work for you needs, you can supply your own RegExp to match against. If the pattern option is specified, the start_comment and end_comment options are ignored.
+If the default start and end comment matching doesn't work for your needs, you can supply your own RegExp to match against. If the pattern option is specified, the start_comment and end_comment options are ignored.
 
 ## Example Usage
 The following source code exposes the bar function to the public API for testing, but the bar function should not be accessible in the released library. `grunt-coffee-strip-code` (with the default options) will remove the comment blocks from the example below keeping the bar function private in production:
