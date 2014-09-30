@@ -23,6 +23,9 @@ module.exports = function(grunt) {
         'tasks/*.js',
         '<%= nodeunit.tests %>'
       ],
+      options: {
+        jshintrc: '.jshintrc',
+      }
     },
 
     // clean dirs
