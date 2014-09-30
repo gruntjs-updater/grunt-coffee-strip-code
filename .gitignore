@@ -1,6 +1,9 @@
 *~
 README.html
 npm-debug.log
+node_modules
+tmp/
+
 
 ################################
 # Text Editor
