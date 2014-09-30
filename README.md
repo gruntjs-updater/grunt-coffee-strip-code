@@ -36,14 +36,16 @@ In `Gruntfile.js` add section named `coffee_strip_code` to the data object passe
 
 ### Options
 
-##### options.start_comment_tag
+#### options.start_comment_tag
 Type: `String`
+
 Default value: `test-block-start`
 
 The text inside the opening comment used to identify code to strip.
 
-##### options.end_comment_tag
+#### options.end_comment_tag
 Type: `String`
+
 Default value: `test-block-end`
 
 The text inside the closing comment used to identify code to strip.
