@@ -6,15 +6,13 @@ module.exports = function(grunt) {
   grunt.registerMultiTask("coffee_strip_code", "Strip code matching a specified pattern.", function(target) {
 
     var options = this.options({
-          start_comment: "start-test-code",
-          end_comment: "end-test-code"
+          start_comment_tag: "test-block-start",
+          end_comment_tag: "test-block-end"
         })
       , pattern = options.pattern || new RegExp(
-            "[\\t ]*\\#\\# ?"             // find many occurence of tab or space then ##
-          + options.start_comment         // string
-          + " ?\\#\\#[\\s\\S]*?\\#\\# ?"  // end ## then find whitespace character and non-whitespace character then end ##
-          + options.end_comment           // string
-          + " ?\\#\\#[\\t ]*\\n?"         // end ## then find many occurence of tab or space and matches any string that contains zero or more occurrences of n
+          "([\\t ]*\\#\\# ?" + options.start_comment_tag + " ?\\#\\#.*\n)" +
+          "[\\s\\S]*?" +
+          "(\\#\\# ?" + options.end_comment_tag + " ?\\#\\#.*\n)"
           , "g"
         );
 
