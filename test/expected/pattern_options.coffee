@@ -1,0 +1,2 @@
+myFun = () ->
+  doSomething()
