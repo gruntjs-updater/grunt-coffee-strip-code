@@ -12,7 +12,7 @@ module.exports = function(grunt) {
           end_comment_tag: "test-block-end"
         })
       , pattern = options.pattern || new RegExp(
-          "([\\t ]*\\#\\# ?" + options.start_comment_tag + " ?\\#\\#.*\n)" +
+          "([\\t ]*\\#\\# ?" + options.start_comment_tag + " ?\\#\\#.*\n?)" +
           "[\\s\\S]*?" +
           "(\\#\\# ?" + options.end_comment_tag + " ?\\#\\#.*\n)"
           , "g"
