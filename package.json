@@ -1,6 +1,6 @@
 {
   "name": "grunt-coffee-strip-code",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A Grunt task to remove delvelop and test only code blocks from production builds of CoffeeScript files.",
   "author": {
     "name": "Maciej Sypień",
