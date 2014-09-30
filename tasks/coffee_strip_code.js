@@ -1,7 +1,9 @@
 module.exports = function(grunt) {
 
-  // Please see the Grunt documentation for more information regarding task
-  // creation: http://gruntjs.com/creating-tasks
+  /**
+   *  Please see the Grunt documentation for more information regarding task
+   *  creation: http://gruntjs.com/creating-tasks
+   */
 
   grunt.registerMultiTask("coffee_strip_code", "Strip code matching a specified pattern.", function(target) {
 
@@ -28,7 +30,7 @@ module.exports = function(grunt) {
         var contents = grunt.file.read(filepath)
           , replacement = contents.replace(pattern, "");
         // if replacement is different than contents, save file and print a success message.
-        if (contents != replacement) {
+        if (contents !== replacement) {
           if (f.dest) {
             grunt.file.write(f.dest, replacement);
             grunt.log.writeln("Stripped code from " + filepath + " and saved to " + f.dest);
