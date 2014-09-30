@@ -1,0 +1,23 @@
+{
+	"folders":
+	[
+		{
+			"follow_symlinks": true,
+			"path": ".",
+      "folder_exclude_patterns":
+      [
+        "*.idea"
+      ],
+      "file_exclude_patterns":
+      [
+        "README.html"
+      ],
+		}
+	],
+  "settings":
+  {
+    "tab_size": 2,
+    "word_wrap": true
+  }
+
+}
