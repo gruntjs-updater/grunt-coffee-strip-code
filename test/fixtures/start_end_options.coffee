@@ -6,7 +6,8 @@ someFun = () ->
 ## test-block-end ##
 
 ## {test} ##
-function bar() { }
+bar = () ->
+  myVar = "bla bla bla"
 ## {/test} ##
 
 myFun = (a, b, c) ->

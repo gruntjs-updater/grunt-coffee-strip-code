@@ -1,5 +1,5 @@
 ## test-block-start ##
-"STFU!";
+stringOne="What's Up Men!"
 ## test-block-end ##
 
-"OMG!";
+stringTwo="OMG!"
