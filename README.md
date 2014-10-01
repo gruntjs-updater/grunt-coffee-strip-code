@@ -1,4 +1,4 @@
-# grunt-coffee-strip-code
+# grunt-coffee-strip-code [![Build Status](https://travis-ci.org/karma-runner/grunt-karma.svg?branch=master)](https://travis-ci.org/egel/grunt-coffee-strip-code)
 
 A Grunt task to remove develop and test only code blocks from CoffeeScript files for production build.
 
