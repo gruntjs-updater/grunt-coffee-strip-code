@@ -50,7 +50,7 @@ Default value: `test-block-end`
 
 The text inside the closing comment used to identify code to strip.
 
-##### options.pattern
+#### options.pattern
 Type: `RegExp`
 Default value: (a generated RegExp matching the start and end comments)
 
@@ -117,6 +117,13 @@ The normal behavior is to strip out code in the source files and then save those
 
 ## Contribute
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using Grunt.
+
+## Release History
+
+- 0.1.3 Added travis watcher
+- 0.1.2 Fixed few typos into documentation
+- 0.1.1 Fixed few typos into documentation
+- 0.1.0 Initial release
 
 ## License
 The MIT License (MIT)
