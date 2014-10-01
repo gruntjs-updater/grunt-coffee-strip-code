@@ -1,25 +1,26 @@
 module.exports = function(grunt) {
 
   /**
-   * Load external tasks
-   */
-  grunt.loadTasks('tasks');
-
-  /**
-   * Load grunt plugins
-   */
-  grunt.loadNpmTasks('grunt-contrib-jshint');
-  grunt.loadNpmTasks('grunt-contrib-clean');
-  grunt.loadNpmTasks('grunt-contrib-copy');
-  grunt.loadNpmTasks('grunt-contrib-nodeunit');
-
-  /**
    * Configuration
    */
   grunt.initConfig({
+
+    /**
+     * `coffeelint` does the same as `jshint`, but for CoffeeScript.
+     * CoffeeScript is not the default in ngBoilerplate, so we're just using
+     * the defaults here.
+     */
+    coffeelint: {
+      tests: {
+        files: {
+          src: [ 'test/**/*.coffee' ]
+        }
+      }
+    },
+
     jshint: {
       all: [
-        'index.js',
+        'Gruntfile.js',
         'tasks/*.js',
         '<%= nodeunit.tests %>'
       ],
@@ -77,10 +78,26 @@ module.exports = function(grunt) {
 
     // make unit tests
     nodeunit: {
-      tests: ['tests/*_test.coffee']
+      tests: ['test/*_test.js']
     },
 
-  })
+  });
+
+
+  /**
+   * Load external tasks
+   */
+  grunt.loadTasks('tasks');
+
+
+  /**
+   * Load grunt plugins
+   */
+  grunt.loadNpmTasks('grunt-contrib-jshint');
+  grunt.loadNpmTasks('grunt-coffeelint');
+  grunt.loadNpmTasks('grunt-contrib-clean');
+  grunt.loadNpmTasks('grunt-contrib-copy');
+  grunt.loadNpmTasks('grunt-contrib-nodeunit');
 
 
   /**
@@ -88,7 +105,8 @@ module.exports = function(grunt) {
    */
   // Whenever the 'test' task is run, first clean "tmp" directory,
   // then run this plugin tasks then test the result
-  grunt.registerTask('test', ['clean', 'copy', 'coffee_strip_code', 'nodeunit'])
+  grunt.registerTask('test', ['clean', 'copy', 'coffee_strip_code', 'nodeunit']);
 
-  grunt.registerTask('default', ['jshint', 'test'])
-}
+  grunt.registerTask('default', ['jshint', 'coffeelint', 'test']);
+
+};
